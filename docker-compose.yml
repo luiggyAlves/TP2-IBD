@@ -1,0 +1,10 @@
+services:
+  tp2:
+    build:
+      context: .
+      args:
+        BLOCK_SIZE: "4096"
+    image: tp2
+    volumes:
+      - ./data:/data
+    working_dir: /app

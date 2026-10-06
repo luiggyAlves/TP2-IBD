@@ -1,0 +1,38 @@
+# Consultas oficiais — TP2 IBD 2026/02
+#
+# Toda a turma deve executar exatamente estas consultas sobre a amostra oficial
+# e reportar os resultados no relatorio (Secao 6 e 7.3 do enunciado).
+# Linhas iniciadas por '#' sao comentarios.
+#
+# Cada consulta de ID vale para findrec (Parte 1) e seek1 (Parte 2).
+# Cada consulta de titulo vale para findtitle (Parte 1) e seek2 (Parte 2).
+# Cada intervalo vale para findrange (Parte 1) e seekrange (Parte 2).
+
+# --- IDs existentes, em diferentes pontos do arquivo ---
+id 5
+id 316639
+id 663752
+id 1014283
+id 1483294
+
+# --- IDs inexistentes ---
+id 1
+id 2000000
+
+# --- Titulo existente e unico ---
+titulo "Design and implementation of an immersive virtual reality system based on a smartphone platform."
+titulo "A rotating-magnet based wireless electrical power transfer for biomedical implants"
+
+# --- Titulo existente e repetido em varios registros ---
+titulo "Review of particle physics particle data group"
+titulo "Two-dimensional gas of massless Dirac fermions in graphene"
+
+# --- Titulo inexistente ---
+titulo "Um titulo que nao existe na base"
+
+# --- Intervalos de IDs: poucos, muitos e nenhum resultado ---
+intervalo 1 50
+intervalo 1000 1100
+intervalo 500000 500500
+intervalo 200000 260000
+intervalo 1600000 1700000

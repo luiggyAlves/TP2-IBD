@@ -1,0 +1,8 @@
+bin/*
+!bin/.gitkeep
+data/*
+!data/.gitkeep
+!data/README.md
+*.o
+*.dat
+*.idx

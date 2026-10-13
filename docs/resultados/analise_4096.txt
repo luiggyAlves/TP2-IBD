@@ -1,0 +1,38 @@
+== analise (BLOCK_SIZE=4096, data/db_4096) ==
+
+[A] findrec sobre todas as chaves (custo = 1 cabecalho + posicao na cadeia)
+    registros no 1. bloco da cadeia: 187849 (91.95%) -> custo 2
+    registros no 2. bloco da cadeia: 16426 (8.04%) -> custo 3
+    registros no 3. bloco da cadeia: 10 (0.00%) -> custo 4
+    custo medio de busca COM sucesso : 2.0805 blocos
+    custo medio de busca SEM sucesso : 2.2560 blocos (ID que cai em bucket uniforme)
+    buckets com cadeia de 1 bloco(s): 24675 (74.43%)
+    buckets com cadeia de 2 bloco(s): 8467 (25.54%)
+    buckets com cadeia de 3 bloco(s): 9 (0.03%)
+    total de blocos do arquivo: 41637
+
+[B] seek2 para 5000 titulos distintos sorteados (altura 4)
+    leituras medias no indice: 4.0634 (maximo 5)
+    candidatos medios (= leituras no arquivo de dados): 1.0602
+    4 leituras no indice: 4683 titulos (93.66%)
+    5 leituras no indice: 317 titulos (6.34%)
+
+[C] seekrange em funcao do numero k de registros do intervalo (findrange le sempre 41637 blocos)
+             k         indice          dados          total   total/scan
+             1              3              1              4       0.000
+            10              3             10             13       0.000
+           100              3            100            103       0.002
+          1000              8           1000           1008       0.024
+          5000             27           5000           5027       0.121
+         10000             50          10000          10050       0.241
+         20000             98          20000          20098       0.483
+         30000            146          30000          30146       0.724
+         40000            192          40000          40192       0.965
+         60000            287          60000          60287       1.448  <- pior que a varredura
+        100000            470         100000         100470       2.413  <- pior que a varredura
+
+[D] indice primario construido com 3 ordens de insercao diferentes
+    ordem                              altura   folhas internos ocup.folha     leituras     escritas
+    fisica do arquivo hash (upload)         3      910        3      55.3%       504299       206107
+    crescente de ID (ordem do CSV)          3     1001        4      50.3%       508614       206291
+    aleatoria                               3      717        3      70.2%       476648       205721

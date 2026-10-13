@@ -9,6 +9,7 @@
 #ifndef CSV_READER_HPP
 #define CSV_READER_HPP
 
+#include <cstdint>  // std::uint64_t (faltava no template; g++ 13 nao inclui implicitamente)
 #include <fstream>
 #include <string>
 

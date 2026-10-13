@@ -6,3 +6,7 @@ data/*
 *.o
 *.dat
 *.idx
+__pycache__/
+# Fonte intermediaria do relatorio (gerada por scripts/gerar_relatorio.py);
+# o enunciado pede o relatorio em arquivo unico: docs/tp2_relatorio.pdf
+docs/tp2_relatorio.html

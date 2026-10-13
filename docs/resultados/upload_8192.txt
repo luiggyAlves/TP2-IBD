@@ -1,0 +1,53 @@
+== upload: carga inicial ==
+arquivo de entrada (CSV)       : data/artigo-amostra.csv
+arquivo de dados               : data/db_8192/artigos.dat
+indice primario (ID)           : data/db_8192/idx_id.bpt
+indice secundario (Titulo)     : data/db_8192/idx_titulo.bpt
+BLOCK_SIZE                     : 8192 bytes
+
+-- Parte 1: arquivo de dados organizado por hashing --
+registros carregados           : 204285
+linhas ignoradas (malformadas) : 2
+registros truncados            : 0
+layout do registro             : tamanho variavel (39 bytes fixos + titulo + autores + snippet)
+tamanho do registro            : medio 529.6 bytes (min 48, max 1323)
+bytes uteis por bloco          : 8176 (cabecalho do bloco: 16 bytes)
+funcao de hashing              : h(ID) = ID mod N
+numero de buckets (N)          : 16547 (primo; ocupacao alvo 80%)
+blocos do arquivo de dados     : 19298 (1 cabecalho + 16547 primarios + 2750 overflow)
+registros por bloco            : media 10.59 (min 1, max 19); capacidade para o registro medio = 15
+taxa de ocupacao dos blocos    : 68.4% (bytes de registros / bytes dos 19297 blocos de dados)
+ocupacao dos blocos primarios  : 80.0% (registros / capacidade se nao houvesse overflow)
+buckets vazios                 : 0
+buckets com overflow           : 2750 (16.6%)
+maior cadeia de um bucket      : 2 blocos
+maior bucket                   : 26 registros (media 12.35 por bucket)
+comprimento das cadeias        : [1 bloco(s): 13797 buckets] [2 bloco(s): 2750 buckets]
+registros por bucket           : 3:6 4:13 5:64 6:197 7:472 8:787 9:1222 10:1750 11:2025 12:2194 13:2145 14:1845 15:1454 16:1066 17:645 18:337 19:187 20:84 21:31 22:16 23:6 26:1
+custo da carga (dados)         : 204285 blocos lidos, 223584 blocos escritos
+
+-- Parte 2: indices B+Tree (construidos por insercao, na ordem fisica do arquivo de dados) --
+varredura do arquivo de dados  : 19297 blocos lidos
+[indice primario (ID)] data/db_8192/idx_id.bpt
+  tamanho da chave             : 4 bytes
+  entrada de folha             : 10 bytes (chave + RID de 6 bytes)
+  capacidade da folha          : 816 entradas
+  ordem do no interno          : 1020 filhos (1019 chaves)
+  entradas inseridas           : 204285 (de 204285; 0 duplicadas recusadas)
+  altura                       : 2 niveis (raiz ... folhas)
+  blocos (nos) do indice       : 448 (folhas 447, internos 1)
+  ocupacao media das folhas    : 56.0% (457.0 entradas por folha)
+  custo da construcao          : 407754 blocos lidos, 205179 blocos escritos
+[indice secundario (Titulo)] data/db_8192/idx_titulo.bpt
+  tamanho da chave             : 70 bytes
+  entrada de folha             : 76 bytes (chave + RID de 6 bytes)
+  capacidade da folha          : 107 entradas
+  ordem do no interno          : 111 filhos (110 chaves)
+  entradas inseridas           : 204285 (de 204285; 0 duplicadas recusadas)
+  altura                       : 3 niveis (raiz ... folhas)
+  blocos (nos) do indice       : 2807 (folhas 2774, internos 33)
+  ocupacao media das folhas    : 68.8% (73.6 entradas por folha)
+  custo da construcao          : 604683 blocos lidos, 209895 blocos escritos
+
+tempo total: 8315 ms (informativo; nao e a metrica do trabalho)
+RESUMO upload block_size=8192 registros=204285 buckets=16547 overflow=2750 blocos_dados=19298 escritas_dados=223584 leituras_dados=204285 idx1_altura=2 idx1_blocos=448 idx1_leituras=407754 idx1_escritas=205179 idx2_altura=3 idx2_blocos=2807 idx2_leituras=604683 idx2_escritas=209895 varredura=19297

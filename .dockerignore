@@ -1,0 +1,7 @@
+# O CSV e os arquivos de dados/indice NAO entram na imagem: eles sao montados
+# em /data em tempo de execucao (docker run -v $(pwd)/data:/data ...).
+data/
+# Binarios sao recompilados dentro da imagem (RUN make build).
+bin/
+.git/
+docs/tp2_relatorio.html

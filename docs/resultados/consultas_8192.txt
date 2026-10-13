@@ -1,0 +1,34 @@
+RESUMO findrec id=5 encontrados=1 blocos_lidos_dados=2 total_blocos_dados=19298
+RESUMO seek1 id=5 encontrados=1 blocos_lidos_indice=2 blocos_lidos_dados=1 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrec id=316639 encontrados=1 blocos_lidos_dados=2 total_blocos_dados=19298
+RESUMO seek1 id=316639 encontrados=1 blocos_lidos_indice=2 blocos_lidos_dados=1 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrec id=663752 encontrados=1 blocos_lidos_dados=2 total_blocos_dados=19298
+RESUMO seek1 id=663752 encontrados=1 blocos_lidos_indice=2 blocos_lidos_dados=1 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrec id=1014283 encontrados=1 blocos_lidos_dados=2 total_blocos_dados=19298
+RESUMO seek1 id=1014283 encontrados=1 blocos_lidos_indice=2 blocos_lidos_dados=1 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrec id=1483294 encontrados=1 blocos_lidos_dados=2 total_blocos_dados=19298
+RESUMO seek1 id=1483294 encontrados=1 blocos_lidos_indice=2 blocos_lidos_dados=1 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrec id=1 encontrados=0 blocos_lidos_dados=2 total_blocos_dados=19298
+RESUMO seek1 id=1 encontrados=0 blocos_lidos_indice=2 blocos_lidos_dados=0 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrec id=2000000 encontrados=0 blocos_lidos_dados=2 total_blocos_dados=19298
+RESUMO seek1 id=2000000 encontrados=0 blocos_lidos_indice=2 blocos_lidos_dados=0 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findtitle encontrados=1 blocos_lidos_dados=19298 total_blocos_dados=19298 titulo="Design and implementation of an immersive virtual reality system based on a smartphone platform."
+RESUMO seek2 encontrados=1 candidatos=1 blocos_lidos_indice=3 blocos_lidos_dados=1 total_blocos_indice=2807 total_blocos_dados=19298 altura=3 titulo="Design and implementation of an immersive virtual reality system based on a smartphone platform."
+RESUMO findtitle encontrados=1 blocos_lidos_dados=19298 total_blocos_dados=19298 titulo="A rotating-magnet based wireless electrical power transfer for biomedical implants"
+RESUMO seek2 encontrados=1 candidatos=1 blocos_lidos_indice=3 blocos_lidos_dados=1 total_blocos_indice=2807 total_blocos_dados=19298 altura=3 titulo="A rotating-magnet based wireless electrical power transfer for biomedical implants"
+RESUMO findtitle encontrados=45 blocos_lidos_dados=19298 total_blocos_dados=19298 titulo="Review of particle physics particle data group"
+RESUMO seek2 encontrados=45 candidatos=45 blocos_lidos_indice=3 blocos_lidos_dados=45 total_blocos_indice=2807 total_blocos_dados=19298 altura=3 titulo="Review of particle physics particle data group"
+RESUMO findtitle encontrados=26 blocos_lidos_dados=19298 total_blocos_dados=19298 titulo="Two-dimensional gas of massless Dirac fermions in graphene"
+RESUMO seek2 encontrados=26 candidatos=26 blocos_lidos_indice=3 blocos_lidos_dados=26 total_blocos_indice=2807 total_blocos_dados=19298 altura=3 titulo="Two-dimensional gas of massless Dirac fermions in graphene"
+RESUMO findtitle encontrados=0 blocos_lidos_dados=19298 total_blocos_dados=19298 titulo="Um titulo que nao existe na base"
+RESUMO seek2 encontrados=0 candidatos=0 blocos_lidos_indice=3 blocos_lidos_dados=0 total_blocos_indice=2807 total_blocos_dados=19298 altura=3 titulo="Um titulo que nao existe na base"
+RESUMO findrange ini=1 fim=50 encontrados=10 blocos_lidos_dados=19298 total_blocos_dados=19298
+RESUMO seekrange ini=1 fim=50 encontrados=10 blocos_lidos_indice=2 blocos_lidos_dados=10 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrange ini=1000 fim=1100 encontrados=20 blocos_lidos_dados=19298 total_blocos_dados=19298
+RESUMO seekrange ini=1000 fim=1100 encontrados=20 blocos_lidos_indice=2 blocos_lidos_dados=20 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrange ini=500000 fim=500500 encontrados=99 blocos_lidos_dados=19298 total_blocos_dados=19298
+RESUMO seekrange ini=500000 fim=500500 encontrados=99 blocos_lidos_indice=2 blocos_lidos_dados=99 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrange ini=200000 fim=260000 encontrados=3052 blocos_lidos_dados=19298 total_blocos_dados=19298
+RESUMO seekrange ini=200000 fim=260000 encontrados=3052 blocos_lidos_indice=9 blocos_lidos_dados=3052 total_blocos_indice=448 total_blocos_dados=19298 altura=2
+RESUMO findrange ini=1600000 fim=1700000 encontrados=0 blocos_lidos_dados=19298 total_blocos_dados=19298
+RESUMO seekrange ini=1600000 fim=1700000 encontrados=0 blocos_lidos_indice=2 blocos_lidos_dados=0 total_blocos_indice=448 total_blocos_dados=19298 altura=2
